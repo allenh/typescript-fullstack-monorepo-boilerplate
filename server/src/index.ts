@@ -20,6 +20,8 @@ app.use(logger());
 // Routes
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(3000, () => {
-  console.log("Koa started");
+const port: number = 3000;
+
+app.listen(port, () => {
+  console.log(`Koa started on port: ${port}`);
 });
