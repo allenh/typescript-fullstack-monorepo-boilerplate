@@ -1,0 +1,26 @@
+####################################################
+##
+## The docker file is made with the 
+##   intention of serving the app with nodemon so it 
+##
+####################################################
+
+# takes app source and put it in docker
+
+FROM node:16 as base
+
+WORKDIR /home/server/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+# based on the app source builds a new image called development
+
+FROM base as development
+
+ENV NODE_PATH=./dist
+
+RUN npm run build

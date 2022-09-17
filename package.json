@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "echo \"not implemented\" ",
+    "start:server:prod": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
