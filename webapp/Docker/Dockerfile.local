@@ -1,0 +1,9 @@
+FROM node:16 as base
+
+# set up
+WORKDIR /webapp
+COPY . .
+
+# build
+RUN npm ci
+RUN npm run build

@@ -12,3 +12,11 @@ services:
       - 3000:3000
       - 9229:9229
     command: npm run dev
+  webapp:
+    build:
+      context: ./webapp
+      dockerfile: ./Docker/Dockerfile.local
+      target: base
+    ports:
+      - 8000:8000
+    command: npm run dev
