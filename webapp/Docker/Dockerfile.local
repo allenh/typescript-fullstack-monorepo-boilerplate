@@ -2,8 +2,12 @@ FROM node:16 as base
 
 # set up
 WORKDIR /webapp
+
+COPY package*.json ./
+
+RUN npm ci
+
 COPY . .
 
 # build
-RUN npm ci
 RUN npm run build

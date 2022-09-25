@@ -17,6 +17,10 @@ services:
       context: ./webapp
       dockerfile: ./Docker/Dockerfile.local
       target: base
+    volumes:
+      - ./webapp/src:/webapp/src
+    expose:
+      - 8000
     ports:
       - 8000:8000
     command: npm run dev
