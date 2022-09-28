@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from "react-dom/client";
 import {
   BrowserRouter,
   Routes,
@@ -15,4 +15,7 @@ const App = () => (
   </BrowserRouter>
 );
 
-ReactDOM.render(<App />, document.getElementById('app'));
+const appContainer = document.getElementById('app') as Element;
+const root = createRoot(appContainer);
+
+root.render(<App />);
