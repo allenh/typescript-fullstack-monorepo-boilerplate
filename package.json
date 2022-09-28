@@ -7,7 +7,8 @@
     "start": "docker compose up",
     "build": "docker compose build",
     "start:build": "docker compose up --build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:docker": "docker rm -f $(docker ps -aq) ; docker rmi $(docker images)"
   },
   "author": "",
   "license": "ISC"
