@@ -1,9 +1,11 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+const env = process.env.NODE_ENV || 'development'
+
+const webpackConfig = {
   entry: './src/index.tsx',
-  mode: process.env.NODE_ENV || 'development',
+  mode: env,
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
@@ -31,10 +33,15 @@ module.exports = {
   },
   plugins: [new HtmlWebPackPlugin({
     template: path.join(__dirname, 'src', 'index.html'),
-  })],
-  devServer: {
+  })]
+};
+
+if (env === 'development') {
+  webpackConfig.devServer = {
     compress: false,
     port: 8000,
     host: '0.0.0.0',
-  },  
-};
+  }
+}
+
+module.exports = webpackConfig;
