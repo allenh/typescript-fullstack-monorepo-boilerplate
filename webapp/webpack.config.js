@@ -1,32 +1,38 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const htmlPlugin = new HtmlWebPackPlugin({
-  // be careful when using other loaders that they might pick up the template
-  template: './src/index.html',
-  filename: './index.html'
-});
 
 module.exports = {
-  mode: 'development',
+  entry: './src/index.tsx',
+  output: { path: path.join(__dirname, 'build'), filename: 'index.bundle.js' },
+  mode: process.env.NODE_ENV || 'development',
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js|jsx$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: ['babel-loader'],
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        use: ['file-loader'],
+      },
     ]
   },
-  plugins: [htmlPlugin],
+  plugins: [new HtmlWebPackPlugin({
+    template: path.join(__dirname, 'src', 'index.html'),
+  })],
   devServer: {
     compress: false,
     port: 8000,
-    host: "0.0.0.0",
-  },
+    host: '0.0.0.0',
+  },  
 };
