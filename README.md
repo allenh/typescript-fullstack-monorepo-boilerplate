@@ -50,13 +50,8 @@ The application default URLs for the services:
 Running the application on root folder: `npm build ; npm start`. This will invoke Docker to build the necessary images to run the containers.
 
 It's also possible to run each service individually outside of docker:
-### Server
-* Build: `npm build`
-* Dev: `npm run dev`
-* Directly serve from `/dist`: `npm start`
-
-### Webapp
-* Dev: `npm run dev`
+* Server - `npm run dev`
+* Webapp - `npm run dev`
 
 ## NPM Scripts
 
