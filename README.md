@@ -61,6 +61,7 @@ It's also possible to run each service individually outside of docker:
 ## Notes
 
 * `./webapp/webpack.config.js` uses a `NODE_ENV` environment variable to distinguish environments
+* transpiled server files are served from `./server/dist` with the environment variable `NODE_PATH`
 
 ## Motivation
 
