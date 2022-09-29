@@ -58,6 +58,39 @@ It's also possible to run each service individually outside of docker:
 ### Webapp
 * Dev: `npm run dev`
 
+## NPM Scripts
+
+Root level:
+
+```bash
+# start docker compose
+npm start
+# build docker images
+npm build
+# build docker images then start application
+npm run start:build
+# remove all docker artifacts
+npm run clean:docker
+```
+
+Server:
+
+```bash
+# start the server from ./dist
+npm start
+# builds the server, transpiled server is in ./dist
+npm build
+# runs development server with nodemon
+npm run dev
+```
+
+Webapp:
+
+```bash
+# runs the react server with webpack
+npm run dev
+```
+
 ## Notes
 
 * `./webapp/webpack.config.js` uses a `NODE_ENV` environment variable to distinguish environments
