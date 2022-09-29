@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-const env = process.env.NODE_ENV || 'development'
+const env = process.env.NODE_ENV || 'development';
 
 const webpackConfig = {
   entry: './src/index.tsx',
@@ -41,7 +41,7 @@ if (env === 'development') {
     compress: false,
     port: 8000,
     host: '0.0.0.0',
-  }
+  };
 }
 
 module.exports = webpackConfig;
