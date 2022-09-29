@@ -1,5 +1,5 @@
 import Home from './Home';
 
 export {
-    Home,
+  Home,
 };
