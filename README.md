@@ -1,0 +1,69 @@
+# Node Fullstack Monorepo Boilerplate
+
+A fully Dockerized simple and modular Node-based full stack monorepo boilerplate.
+
+## Requirements
+
+* Node 16
+* NPM 8
+* Docker CLI
+
+## Features
+
+* Typescript
+* Fully Dockerized application
+* ESLint
+* VSCode debugger configured for server
+* Hot reload configured for both server and webapp
+
+## Technical Stack
+
+### Server
+
+* Koa 2
+  * Koa Router
+  * Koa Bodyparser
+  * Koa JSON
+
+### Webapp
+
+* React 18
+* React Router
+* Redux
+
+## Installation
+
+The project is set up as a Github template. To use this template follow this [Github Guide](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+
+Because this is a monorepo so we need to run `npm install` three times in three different places to set up the local development environment. This mostly to stop the IDE from complaining.
+
+* `./` project root folder  - installs modules for eslint
+* `./server` project folder - installs modules for the server project
+* `./webapp` project folder - installs modules for the webapp project
+
+## Running the application
+
+The application default URLs for the services:
+* server: `localhost:3000`
+* webapp: `localhost:8000`
+
+Running the application on root folder: `npm build ; npm start`. This will invoke Docker to build the necessary images to run the containers.
+
+It's also possible to run each service individually outside of docker:
+### Server
+* Build: `npm build`
+* Dev: `npm run dev`
+* Directly serve from `/dist`: `npm start`
+
+### Webapp
+* Dev: `npm run dev`
+
+## Notes
+
+* `./webapp/webpack.config.js` uses a `NODE_ENV` environment variable to distinguish environments
+
+## Motivation
+
+It's easy to find opinionated boilerplates for all kinds of preconfigured Node-based applications. Yet, it's difficult to find modular and minimalistic boilerplates. It's even more difficult to find a monorepo boilerplate of the same. As a result, this project was built.
+
+This monorepo intends to be easy to build on with very minimal starter code. It also lets the user completely change some underlying frameworks such as swapping Koa to Express. I have also configured some development features such as hot code replacement and VSCode debugger. 
