@@ -9,7 +9,7 @@
     "dev": "webpack serve --config webpack.config.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
