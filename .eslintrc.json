@@ -8,7 +8,7 @@
         "plugin:@typescript-eslint/recommended"
     ],
     "ignorePatterns": [
-        "webpack.*",
+        "webpack.*"
     ],
     "overrides": [
     ],
