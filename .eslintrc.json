@@ -7,6 +7,9 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
+    "ignorePatterns": [
+        "webpack.*",
+    ],
     "overrides": [
     ],
     "parser": "@typescript-eslint/parser",
@@ -15,7 +18,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint/eslint-plugin"
     ],
     "rules": {
         "indent": [
@@ -33,6 +36,9 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "no-unused-vars": ["warn", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "arrow-body-style": ["error", "as-needed", { "requireReturnForObjectLiteral": true }],
+        "max-len": ["error", { "code": 120, "comments": 150 }]
     }
 }
