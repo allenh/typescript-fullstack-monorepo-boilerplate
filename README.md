@@ -15,6 +15,7 @@ A fully Dockerized simple and modular Node-based full stack monorepo boilerplate
 * ESLint
 * VSCode debugger configured for server
 * Hot reload configured for both server and webapp
+* Basic Github workflows configuration
 
 ## Technical Stack
 
