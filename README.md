@@ -4,8 +4,8 @@ A fully Dockerized simple and modular Node-based full stack monorepo boilerplate
 
 ## Requirements
 
-* Node 16
-* NPM 8
+* Node 16+
+* NPM 8+
 * Docker CLI
 
 ## Features
