@@ -11,9 +11,6 @@ updates:
       interval: "weekly"
     groups:
       minor-and-patch:
-        applies-to:
-          - version-updates
-          - security-updates
         update-types:
           - "minor"
           - "patch"
@@ -23,8 +20,7 @@ updates:
       interval: "weekly"
     groups:
       security:
-        applies-to:
-          - security-updates
+        applies-to: security-updates
         update-types:
           - "minor"
           - "patch"
@@ -38,8 +34,7 @@ updates:
       interval: "weekly"
     groups:
       security:
-        applies-to:
-          - security-updates
+        applies-to: security-updates
         update-types:
           - "minor"
           - "patch"
@@ -53,8 +48,7 @@ updates:
           - "*loader*"
       # group all other minor and patches
       minor-and-patches:
-        applies-to:
-          - version-updates
+        applies-to: version-updates
         update-types:
           - "minor"
           - "patch"
