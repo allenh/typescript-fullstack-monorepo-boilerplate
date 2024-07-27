@@ -7,11 +7,11 @@ import * as cors from '@koa/cors';
 const app: Koa = new Koa();
 const router: Router = new Router();
 
-// Hello world
+// index route
 router.get('/', async (ctx, next) => {
-  ctx.body = { msg: 'Hello world!!!' };
+  ctx.body = { msg: '200 OK' };
 
-  await next();
+  return next();
 });
 
 // Middlewares
