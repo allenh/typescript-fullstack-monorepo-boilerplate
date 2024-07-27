@@ -15,7 +15,7 @@ A fully Dockerized simple and modular Node-based full stack monorepo boilerplate
 * ESLint
 * VSCode debugger configured for server
 * Hot reload configured for both server and webapp
-* Basic Github workflows configuration
+* Basic Github workflows configuration with E2E
 
 ## Technical Stack
 
@@ -25,12 +25,15 @@ A fully Dockerized simple and modular Node-based full stack monorepo boilerplate
   * Koa Router
   * Koa Bodyparser
   * Koa JSON
+* Vitest
 
 ### Webapp
 
+* Vite
 * React 18
 * React Router
 * Redux
+* Playwright
 
 ## Installation
 
