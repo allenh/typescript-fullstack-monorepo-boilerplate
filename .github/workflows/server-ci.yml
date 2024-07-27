@@ -18,3 +18,18 @@ jobs:
         run: |
           cd server
           npm run lint
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Install package
+        run: |
+          npm install
+          cd server
+          npm install && npm run build
+      - name: Run test
+        run: |
+          cd server
+          npm run start &
+          npm run test:e2e

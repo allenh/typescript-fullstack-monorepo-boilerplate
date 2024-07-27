@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "NODE_PATH=./dist node dist/index.js",
-    "build": "tsc -p",
+    "build": "tsc",
     "dev": "nodemon src/index.ts",
     "lint": "npx eslint ./src/**",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:e2e": "vitest run tests/e2e/**"
   },
   "author": "",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "@types/koa-router": "^7.4.4",
     "@types/node": "^20.12.12",
     "nodemon": "^3.0.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "vitest": "^2.0.4"
   }
 }
