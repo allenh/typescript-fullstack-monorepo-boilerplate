@@ -83,13 +83,12 @@ npm run dev
 Webapp:
 
 ```bash
-# runs the react server with webpack
-npm run dev
+# runs the react server with vite
+npm run start
 ```
 
 ## Notes
 
-* `./webapp/webpack.config.js` uses a `NODE_ENV` environment variable to distinguish environments
 * transpiled server files are served from `./server/dist` with the environment variable `NODE_PATH`
 
 ## Motivation
