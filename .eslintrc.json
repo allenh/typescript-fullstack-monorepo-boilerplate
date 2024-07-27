@@ -7,9 +7,6 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
-    "ignorePatterns": [
-        "webpack.*"
-    ],
     "overrides": [
     ],
     "parser": "@typescript-eslint/parser",

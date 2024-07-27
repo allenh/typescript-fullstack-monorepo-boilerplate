@@ -44,7 +44,7 @@ updates:
           - "@babel*"
           - "@types*"
           - "babel*"
-          - "*webpack*"
+          - "*vite*"
           - "*loader*"
       # group all other minor and patches
       minor-and-patches:
