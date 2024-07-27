@@ -18,3 +18,19 @@ jobs:
         run: |
           cd webapp
           npm run lint
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Install package
+        run: |
+          npm install
+          cd webapp
+          npm install
+          npx playwright install --with-deps
+      - name: Run Tests
+        run: |
+          cd webapp
+          npm run start &
+          npx playwright test
