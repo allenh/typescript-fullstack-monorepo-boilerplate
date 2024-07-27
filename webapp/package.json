@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "vite",
+    "start:host": "vite --host",
     "preview": "vite preview",
     "build:prod": "vite build",
     "dev": "webpack serve --config webpack.config.js",
