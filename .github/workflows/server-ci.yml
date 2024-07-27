@@ -30,5 +30,6 @@ jobs:
           npm install && npm run build
       - name: Run test
         run: |
+          cd server
           npm run start &
           npm run test:e2e
