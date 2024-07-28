@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    branches: 
+      - main
+    types: 
+      - closed
+
+jobs:
+  server:
+    if: ${{ github.event.pull_request.merged }}
+    uses: ./.github/workflows/server-ci.yml
+  webapp:
+    if: ${{ github.event.pull_request.merged }}
+    uses: ./.github/workflows/webapp-ci.yml
